@@ -20,6 +20,8 @@ int main(){
     int ws=open(str2,O_WRONLY);
     int rr=open(str1,O_RDONLY);
 
+    int arrno=0;
+
     int j=0;
     while (j<10){
         for(int i=0; i<5; i++){
@@ -29,16 +31,17 @@ int main(){
             }
             arr_str[10]='\0';
             strcpy(arr1[i],arr_str);
+            printf("%s\n",arr1[i] );
         }
 
         int i=0;
         while( i<5){
-            write(ws,arr[i],sizeof(arr[i]));
+            write(ws,arr1[arrno],sizeof(arr1[arrno]));
             i++;
         }
 
         for(int i=5*j; i<(5*j)+10-5; i++){
-            write(ws,&i,sizeof(int));
+            write(ws,&arrno,sizeof(int));
         }
 
         int* IND=(int*)malloc(sizeof(int));
@@ -49,8 +52,8 @@ int main(){
         j++;
 
     }
-    close(ws);
-    close(rr);
+    // close(ws);
+    // close(rr);
 
     return 0;
 }

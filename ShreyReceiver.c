@@ -33,10 +33,10 @@ int main(){
         while(i>0){
             int *ir=(int *)malloc(sizeof(int));
             read(rr,ir,sizeof(int));
-            if(mx<*ir){
-                mx=*ir;
-            }
-            i--;
+            // if(mx<*ir){
+            //     mx=*ir;
+            // }
+            // i--;
         }
         printf("\n");
         write(ws,&mx,sizeof(int));
