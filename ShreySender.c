@@ -11,7 +11,6 @@
 # include <fcntl.h>
 
 char arr1[25+25][11];
-// int string_idx[50];
 #define str1 "ONE"
 #define str2 "TWO"
 
@@ -34,7 +33,7 @@ int main(){
 
         int i=0;
         while( i<5){
-            write(ws,&i,sizeof(int));
+            write(ws,arr[i],sizeof(arr[i]));
             i++;
         }
 

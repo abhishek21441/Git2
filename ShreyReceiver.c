@@ -25,12 +25,9 @@ int main(){
         for(int i=5;i>0;i--){
             char *dd=(char *)malloc((10+1)*sizeof(char));
             read(rr,dd,(10+1));
-            printf("%s ",dd);
         }
 
         int mx=-1;
-
-        printf("\n");
 
         int i=5;
         while(i>0){
@@ -39,7 +36,6 @@ int main(){
             if(mx<*ir){
                 mx=*ir;
             }
-            printf("%d ",mx);
             i--;
         }
         printf("\n");
